@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113202008) do
+ActiveRecord::Schema.define(version: 20170114142949) do
 
   create_table "images", force: :cascade do |t|
     t.string   "url"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170113202008) do
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.boolean  "viewed"
     t.index ["user_id"], name: "index_snaps_on_user_id"
   end
 

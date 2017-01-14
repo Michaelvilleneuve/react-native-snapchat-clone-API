@@ -4,7 +4,7 @@ class SnapsController < ApplicationController
   # GET /snaps
   # GET /snaps.json
   def index
-    @snaps = Snap.order(created_at: :desc).all
+    @snaps = Snap.order(created_at: :desc).limit(20).all
   end
 
   # GET /snaps/1
@@ -38,7 +38,7 @@ class SnapsController < ApplicationController
   # DELETE /snaps/1
   # DELETE /snaps/1.json
   def destroy
-    @snap.destroy
+    @snap.update(viewed: true)
   end
 
   private
