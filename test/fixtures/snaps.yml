@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: snaps
+#
+#  id           :integer          not null, primary key
+#  image        :text
+#  recipient_id :integer
+#  user_id      :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyText
+  recipient_id: 1
+  user: one
+
+two:
+  image: MyText
+  recipient_id: 1
+  user: two
